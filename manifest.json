@@ -25,6 +25,14 @@
       "js": ["content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "iframe-pseudo-fullscreen@tadaexe.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
 
