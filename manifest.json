@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Iframe Pseudo Fullscreen",
+  "version": "1.0.0",
+  "description": "Make a chosen iframe cover the viewport (pseudo fullscreen) and keep it across reloads.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Toggle iframe pseudo fullscreen"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "toggle-pseudo-fullscreen": {
+      "suggested_key": {
+        "default": "Alt+F11"
+      },
+      "description": "Toggle iframe pseudo fullscreen"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
